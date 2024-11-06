@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Fretes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Fretes</h1>
+        <form id="freteForm">
+            <label for="cidadeOrigem">Cidade de Origem:</label>
+            <input type="text" id="cidadeOrigem" required>
+
+            <label for="cidadeDestino">Cidade de Destino:</label>
+            <input type="text" id="cidadeDestino" required>
+
+            <label for="volume">Volume (cm³):</label>
+            <input type="number" id="volume" required>
+
+            <label for="peso">Peso (g):</label>
+            <input type="number" id="peso" required>
+
+            <fieldset>
+                <legend>Tipo de Envio:</legend>
+                <label>
+                    <input type="radio" name="tipo" value="normal" checked> Normal
+                </label>
+                <label>
+                    <input type="radio" name="tipo" value="expresso"> Expresso
+                </label>
+            </fieldset>
+
+            <button type="button" id="calcular">Calcular Frete</button>
+        </form>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
