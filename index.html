@@ -1,40 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Fretes</title>
+    <title>Calculadora de Frete</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Calculadora de Fretes</h1>
+        <h1>Calculadora de Frete</h1>
         <form id="freteForm">
-            <label for="cidadeOrigem">Cidade de Origem:</label>
-            <input type="text" id="cidadeOrigem" required>
+            <label for="cepOrigem">CEP de Origem:</label>
+            <input type="text" id="cepOrigem" placeholder="Digite o CEP de origem" required>
 
-            <label for="cidadeDestino">Cidade de Destino:</label>
-            <input type="text" id="cidadeDestino" required>
+            <label for="cepDestino">CEP de Destino:</label>
+            <input type="text" id="cepDestino" placeholder="Digite o CEP de destino" required>
+
+            <label for="peso">Peso (gramas):</label>
+            <input type="number" id="peso" placeholder="Peso em gramas" required>
 
             <label for="volume">Volume (cm³):</label>
-            <input type="number" id="volume" required>
+            <input type="number" id="volume" placeholder="Volume em cm³" required>
 
-            <label for="peso">Peso (g):</label>
-            <input type="number" id="peso" required>
+            <label for="tipoFrete">Tipo de Frete:</label>
+            <select id="tipoFrete" required>
+                <option value="normal">Normal</option>
+                <option value="expresso">Expresso</option>
+            </select>
 
-            <fieldset>
-                <legend>Tipo de Envio:</legend>
-                <label>
-                    <input type="radio" name="tipo" value="normal" checked> Normal
-                </label>
-                <label>
-                    <input type="radio" name="tipo" value="expresso"> Expresso
-                </label>
-            </fieldset>
-
-            <button type="button" id="calcular">Calcular Frete</button>
+            <button type="button" onclick="calcularFrete()">Calcular Frete</button>
         </form>
-
         <div id="resultado"></div>
     </div>
 
